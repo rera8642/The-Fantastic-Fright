@@ -11,7 +11,7 @@
       "hash": "0ac5fd3fffaf8892ff9a335e20b893daf5c04ef0"
     },
     "com.unity.collab-proxy": {
-      "version": "2.0.7",
+      "version": "2.1.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -75,7 +75,7 @@
       }
     },
     "com.unity.visualscripting": {
-      "version": "1.9.0",
+      "version": "1.9.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -95,7 +95,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.management": {
-      "version": "4.3.3",
+      "version": "4.4.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
