@@ -6,11 +6,19 @@ using UnityEngine;
 public class PlayerTeleport : MonoBehaviour
 {
     [SerializeField] private LayerMask teleportLayer;
-
-    // Update is called once per frame
+    [SerializeField] private GameObject teleportVisualPrefab;
+    private GameObject teleportVisual;
+    private Vector3 finalPosition = Vector3.zero;
+    
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonUp(0)) {
+            transform.position = finalPosition;
+            if (teleportVisual) {
+                Destroy(teleportVisual);
+            }
+            finalPosition = transform.position;
+        } if (Input.GetMouseButton(0)) {
             RaycastHit hit;
             bool hitFound = Physics.Raycast(
                 transform.position,
@@ -20,11 +28,20 @@ public class PlayerTeleport : MonoBehaviour
                 teleportLayer
             );
             if (hitFound) {
-                transform.position = new Vector3(
+                if (!teleportVisual) {
+                    teleportVisual = Instantiate(teleportVisualPrefab);
+                }
+                finalPosition = new Vector3(
                     hit.point.x,
                     transform.position.y,
                     hit.point.z
                 );
+                teleportVisual.transform.position = new Vector3(
+                    finalPosition.x,
+                    hit.point.y,
+                    finalPosition.z
+                );
+                Debug.Log(finalPosition);
             }
         }
     }
