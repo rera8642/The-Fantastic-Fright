@@ -17,10 +17,9 @@ public class PlayerTeleport : MonoBehaviour
                 Camera.main.transform.forward,
                 out hit,
                 Mathf.Infinity,
-                teleportLayer);
-            Debug.Log("Click");
+                teleportLayer
+            );
             if (hitFound) {
-                Debug.Log("hit");
                 transform.position = new Vector3(
                     hit.point.x,
                     transform.position.y,
