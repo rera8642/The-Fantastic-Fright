@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 1528290142}
   - component: {fileID: 1528290141}
   - component: {fileID: 1528290140}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600,6 +600,7 @@ GameObject:
   - component: {fileID: 1543780571}
   - component: {fileID: 1543780570}
   - component: {fileID: 1543780569}
+  - component: {fileID: 1543780573}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -708,6 +709,15 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!45 &1543780573
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543780566}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 737024f24a4498b4ea58a67c1667a3db, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
