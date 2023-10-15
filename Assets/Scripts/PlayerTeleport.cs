@@ -41,7 +41,6 @@ public class PlayerTeleport : MonoBehaviour
                     hit.point.y,
                     finalPosition.z
                 );
-                Debug.Log(finalPosition);
             }
         }
     }
