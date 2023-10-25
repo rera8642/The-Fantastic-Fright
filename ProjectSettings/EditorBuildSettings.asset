@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Title Screen.unity
+    guid: 722dda437c5574fd08ec9b3fedb86e69
+  - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 5a81e7f4da63c48bdaf8e7353d9396a0
-  - enabled: 0
-    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.21.0/Hello Cardboard/Scenes/HelloCardboard.unity
-    guid: 145a2a45d7bc746b19cb68410368bf96
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 12031df3f97784574bcfa0be9f0f79ba, type: 2}
