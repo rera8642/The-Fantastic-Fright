@@ -2,12 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class PlayerTeleport : MonoBehaviour
+public class Player : MonoBehaviour
 {
     [SerializeField] private LayerMask teleportLayer;
     [SerializeField] private LayerMask ghostLayer;
     [SerializeField] private GameObject teleportVisualPrefab;
+    [SerializeField] private UnityEvent<int> catchGhost;
     private GameObject teleportVisual;
     private Vector3 finalPosition = Vector3.zero;
     private bool canTeleport = true;
@@ -33,7 +35,10 @@ public class PlayerTeleport : MonoBehaviour
             );
             if (hitFound) {
                 canTeleport = false;
-                Debug.Log("WOAH");
+                if (catchGhost != null) {
+                    catchGhost.Invoke(1);
+                    hit.transform.gameObject.GetComponent<CatchGhost>().Catch();
+                }
             }
         }
         if (Input.GetMouseButton(0) && canTeleport) {
