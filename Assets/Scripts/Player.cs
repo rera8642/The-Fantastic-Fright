@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask ghostLayer;
     [SerializeField] private GameObject teleportVisualPrefab;
     [SerializeField] private UnityEvent<int> catchGhost;
+    [SerializeField] private int EndGameDelay = 3;
     private GameObject teleportVisual;
     private Vector3 finalPosition = Vector3.zero;
     private bool canTeleport = true;
@@ -66,5 +68,15 @@ public class Player : MonoBehaviour
                 );
             }
         }
+    }
+    public void End()
+    {
+        StartCoroutine(LoadLevelAfterDelay(EndGameDelay));
+    }
+
+    IEnumerator LoadLevelAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene("Title Screen");
     }
 }
