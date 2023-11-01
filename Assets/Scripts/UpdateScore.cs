@@ -9,7 +9,7 @@ public class UpdateScore : MonoBehaviour
 {
     [SerializeField] private TextMeshPro textMesh;
     [SerializeField] private int ghosts = 0;
-    [SerializeField] private int totalGhosts = 10;
+    [SerializeField] private int totalGhosts = 11;
     [SerializeField] private UnityEvent endGame;
     void Start() {
         UpdateUI();
