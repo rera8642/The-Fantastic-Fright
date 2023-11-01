@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
                     ringTossLayer
                 );
                 if (startRingToss) {
-                    ghostCount.SetActive(false);
+                    // ghostCount.SetActive(false);
                     ringCount.SetActive(true);
                     inRingToss = true;
                     ringVisual.SetActive(true);

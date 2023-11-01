@@ -17,7 +17,7 @@ public class UpdateRings : MonoBehaviour
         rings -= scoreInc;
         if (rings == 0) {
             gameObject.SetActive(false);
-            ghostCounter.SetActive(true);
+            // ghostCounter.SetActive(true);
             rings = maxRings;
         }
         UpdateUI();
